@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/marcellefter/react-antd-grid/issues"
   },
-  "homepage": "https://github.com/marcellefter/react-antd-grid#readme"
+  "homepage": "https://github.com/marcellefter/react-antd-grid#readme",
+  "devDependencies": {
+    "@types/react": "^18.0.21",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "typescript": "^4.8.3"
+  }
 }
