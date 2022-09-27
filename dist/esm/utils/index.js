@@ -4,3 +4,4 @@ export * from "./canUseDom";
 export * from "./styleChecker";
 export * from "./detectFlexGapSupported";
 export * from "./type";
+//# sourceMappingURL=index.js.map
