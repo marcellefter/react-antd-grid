@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
-import { responsiveObserve } from "utils";
-import type { ScreenMap } from "utils";
+import { responsiveObserve } from "../utils";
+import type { ScreenMap } from "../utils";
 
 import { useForceUpdate } from "./useForceUpdate";
 

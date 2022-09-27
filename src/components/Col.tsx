@@ -1,8 +1,8 @@
 import classNames from "classnames";
 import * as React from "react";
-import { RowContext } from "contexts";
-import { FlexType } from "types";
-import { parseFlex } from "utils";
+import { RowContext } from "../contexts";
+import { FlexType } from "../types";
+import { parseFlex } from "../utils";
 
 // https://github.com/ant-design/ant-design/issues/14324
 type ColSpanType = number | string;
