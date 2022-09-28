@@ -1,0 +1,59 @@
+@use "sass:math";
+
+$types: "row", "col";
+
+// generate classes for the grid system
+// ------------------------
+@each $type in $types {
+  .#{$type}-push-0 {
+    left: auto;
+  }
+  .#{$type}-pull-0 {
+    right: auto;
+  }
+}
+
+// Make grid mixin
+@mixin make-grid($size: "", $grid-columns) {
+  @for $i from 0 through $grid-columns {
+    @each $type in $types {
+      @if $i == 0 {
+        .#{$type}#{$size}-#{$i} {
+          display: none;
+        }
+        .#{$type}#{$size}-push-#{$i} {
+          left: auto;
+        }
+        .#{$type}#{$size}-pull-#{$i} {
+          right: auto;
+        }
+        .#{$type}#{$size}-offset-#{$i} {
+          margin-left: 0;
+        }
+        .#{$type}#{$size}-order-#{$i} {
+          order: 0;
+        }
+      } @else {
+        $percentageValue: math.percentage(math.div($i, $grid-columns));
+
+        .#{$type}#{$size}-#{$i} {
+          display: block;
+          flex: 0 0 $percentageValue;
+          max-width: $percentageValue;
+        }
+        .#{$type}#{$size}-push-#{$i} {
+          left: $percentageValue;
+        }
+        .#{$type}#{$size}-pull-#{$i} {
+          right: $percentageValue;
+        }
+        .#{$type}#{$size}-offset-#{$i} {
+          margin-left: $percentageValue;
+        }
+        .#{$type}#{$size}-order-#{$i} {
+          order: $i;
+        }
+      }
+    }
+  }
+}

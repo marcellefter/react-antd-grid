@@ -56,7 +56,7 @@ const App = () => (
 And import style manually:
 
 ```jsx
-import 'react-antd-grid/dist/ant-design-gird.css';
+import 'react-antd-grid/dist/styles.css';
 ```
 
 ## 🔗 Links
