@@ -50,6 +50,8 @@ export const Col = React.forwardRef<HTMLDivElement, ColProps>((props, ref) => {
       sizeProps = propSize || {};
     }
 
+    delete others[size];
+
     sizeClassObj = {
       ...sizeClassObj,
       [`${prefixCls}-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
